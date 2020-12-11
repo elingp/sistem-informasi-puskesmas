@@ -13,4 +13,10 @@ class Antrian extends Model
     {
         return $this->hasOne(Pasien::class);
     }
+
+    public function poli()
+    {
+        return $this->belongsTo(Poli::class);
+    }
+    
 }

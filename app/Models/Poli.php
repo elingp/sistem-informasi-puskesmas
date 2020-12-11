@@ -13,4 +13,9 @@ class Poli extends Model
     {
         return $this->hasOne(Pasien::class);
     }
+
+    public function antrians()
+    {
+        return $this->hasMany(Antrian::class);
+    }
 }
