@@ -11,12 +11,12 @@ class Pasien extends Model
 
     public function user()
     {
-        return $this->hasOne(User::class);
+        return $this->belongsTo(User::class);
     }
 
     public function poli()
     {
-        return $this->hasOne(Poli::class);
+        return $this->belongsTo(Poli::class);
     }
 
     public function antrian()

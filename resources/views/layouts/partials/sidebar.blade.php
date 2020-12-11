@@ -29,8 +29,11 @@ padding: 8px 0px;
     <div class="sidebar">
       <div class="user-panel mt-3 pb-3 mb-3 d-flex ">
         <div class="info">
-          <a  class="d-block">Adam Lambert</a>
-          <a  class="d-block">NIK: 7171092121</a>
+          @auth
+          <a  class="d-block">{{ Auth::user->name }}</a>
+
+          @endauth
+          
         </div>
       </div>
 
@@ -345,7 +348,8 @@ padding: 8px 0px;
               </button>
             </div>
             <div class="modal-body">
-              <form action="../../index3.html" method="post">
+              <form method="POST" action="{{ route('login') }}">
+                @csrf
                 <div class="input-group mb-3">
                   <input type="email" class="form-control" placeholder="Email">
                   <div class="input-group-append">

@@ -15,21 +15,22 @@
           <div class="card-body register-card-body">
             <p class="login-box-msg">Tambah Data Petugas</p>
       
-            <form action="../../index.html" method="post">
+            <form method="POST" action="{{ route('register') }}">
+              @csrf
               <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Nama Lengkap Pasien">
+                <input id="name" type="text" class="form-control" placeholder="Nama Lengkap Pasien">
               </div>
               <div class="input-group mb-3">
-                <input type="email" class="form-control" placeholder="Email">
+                <input id="email" type="email" class="form-control" placeholder="Email">
               </div>
               <div class="input-group mb-3">
-                <input type="password" class="form-control" placeholder="NIK">
+                <input type="text" class="form-control" placeholder="NIK">
               </div>
               <div class="input-group mb-3">
-                <input type="password" class="form-control" placeholder="Password Sementara">
+                <input id="password" type="password" class="form-control" placeholder="Password Sementara">
               </div>
               <div class="input-group mb-3">
-                <input type="password" class="form-control" placeholder="Masukkan Kembali Password Sementara">
+                <input id="password" type="password" class="form-control" placeholder="Masukkan Kembali Password Sementara">
               </div>
               <div class="row">
                 <!-- /.col -->

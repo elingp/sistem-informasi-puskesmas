@@ -11,11 +11,16 @@ class Poli extends Model
 
     public function pasien()
     {
-        return $this->hasOne(Pasien::class);
+        return $this->hasMany(Pasien::class);
     }
 
-    public function antrians()
+    public function antrian()
     {
         return $this->hasMany(Antrian::class);
+    }
+
+    public function tenagaKesehatan()
+    {
+        return $this->hasMany(TenagaKesehatan::class);
     }
 }

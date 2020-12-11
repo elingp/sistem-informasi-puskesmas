@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class TenagaKesehatan extends Model
 {
     use HasFactory;
+
+    public function poli()
+    {
+        return $this->belongsTo(Poli::class);
+    }
 }
