@@ -15,6 +15,10 @@ class CreateTenagaKesehatansTable extends Migration
     {
         Schema::create('tenaga_kesehatans', function (Blueprint $table) {
             $table->id();
+            $table->string('nama');
+            $table->string('poli');
+            $table->string('jadwal');
+            $table->string('no_telepon');
             $table->timestamps();
         });
     }
