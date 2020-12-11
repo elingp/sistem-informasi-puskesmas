@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.master');
 });
 
 Route::get('/dashboard', function () {
@@ -22,3 +22,31 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+Route::get('/lihatInformasiNakes', function () {
+    return view('layouts.nakes.lihatInformasi');
+});
+Route::get('/tambahInformasiNakes', function () {
+    return view('layouts.nakes.tambahInformasi');
+});
+Route::get('/suntingInformasiNakes', function () {
+    return view('layouts.nakes.suntingInformasi');
+});
+Route::get('/lihatInformasiPasien', function () {
+    return view('layouts.Pasien.lihatInformasi');
+});
+Route::get('/tambahInformasiPasien', function () {
+    return view('layouts.Pasien.tambahPasien');
+});
+Route::get('/suntingInformasiPasien', function () {
+    return view('layouts.Pasien.suntingInformasi');
+});
+Route::get('/lihatInformasiPetugas', function () {
+    return view('layouts.Petugas.lihatInformasi');
+});
+Route::get('/tambahInformasiPetugas', function () {
+    return view('layouts.Petugas.tambahPetugas');
+});
+Route::get('/suntingInformasiPetugas', function () {
+    return view('layouts.Petugas.suntingInformasi');
+});
