@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class TenagaKesehatanSeeder extends Seeder
 {
@@ -14,23 +15,29 @@ class TenagaKesehatanSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('polis')->insert([
-            'poli_id' => 1,
+        DB::table('tenaga_kesehatans')->insert([
+            'poli_id' => '1',
             'nama' => 'dr. Supardi',
             'jadwal' => 'Senin 4-5pm, Selasa 6-8pm',
-            'no_telepon' => '0815678991'
+            'no_telepon' => '0815678991',
+            'created_at' => now(),
+            'updated_at' => now(),
         ]);
-        DB::table('polis')->insert([
+        DB::table('tenaga_kesehatans')->insert([
             'poli_id' => 2,
             'nama' => 'drg. Alfreds',
             'jadwal' => 'Kamis 3-5pm, Sabtu 12-3pm',
-            'no_telepon' => '081567899'
+            'no_telepon' => '081567899',
+            'created_at' => now(),
+            'updated_at' => now(),
         ]);
-        DB::table('polis')->insert([
+        DB::table('tenaga_kesehatans')->insert([
             'poli_id' => 3,
             'nama' => 'dr. Akila',
             'jadwal' => 'Rabu 12-3pm, Jumat 6-8pm',
-            'no_telepon' => '081567898'
+            'no_telepon' => '081567898',
+            'created_at' => now(),
+            'updated_at' => now(),
         ]);
     }
 }

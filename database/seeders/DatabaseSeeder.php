@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\TenagaKesehatan;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -19,7 +18,7 @@ class DatabaseSeeder extends Seeder
             RolesAndPermissionsSeeder::class,
             UserSeeder::class,
             PoliSeeder::class,
-            TenagaKesehatan::class,
+            TenagaKesehatanSeeder::class,
         ]);
     }
 }

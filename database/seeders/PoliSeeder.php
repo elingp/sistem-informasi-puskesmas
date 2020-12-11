@@ -16,12 +16,18 @@ class PoliSeeder extends Seeder
     {
         DB::table('polis')->insert([
             'nama' => 'Umum',
+            'created_at' => now(),
+            'updated_at' => now(),
         ]);
         DB::table('polis')->insert([
             'nama' => 'Gigi',
+            'created_at' => now(),
+            'updated_at' => now(),
         ]);
         DB::table('polis')->insert([
             'nama' => 'KIA',
+            'created_at' => now(),
+            'updated_at' => now(),
         ]);
     }
 }
