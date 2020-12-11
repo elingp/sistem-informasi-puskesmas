@@ -15,10 +15,11 @@ class CreateTenagaKesehatansTable extends Migration
     {
         Schema::create('tenaga_kesehatans', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('poli_id');
+            $table->foreign('poli_id')->references('id')->on('polis')->onDelete('cascade');
             $table->string('nama');
-            $table->string('poli');
             $table->string('jadwal');
-            $table->string('no_telepon');
+            $table->string('no_telepon', 13);
             $table->timestamps();
         });
     }

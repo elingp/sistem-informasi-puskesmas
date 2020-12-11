@@ -15,11 +15,11 @@ class CreateAntriansTable extends Migration
     {
         Schema::create('antrians', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('poli_id');
+            $table->foreignId('poli_id');
             $table->foreign('poli_id')->references('id')->on('polis')->onDelete('cascade');
-            $table->unsignedBigInteger('pasien_id');
+            $table->foreignId('pasien_id');
             $table->foreign('pasien_id')->references('id')->on('pasiens')->onDelete('cascade');
-            $table->integer('nomor_antrian');
+            $table->unsignedSmallInteger('nomor_antrian');
             $table->timestamps();
         });
     }

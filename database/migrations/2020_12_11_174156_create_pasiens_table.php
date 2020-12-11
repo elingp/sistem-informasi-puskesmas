@@ -15,11 +15,11 @@ class CreatePasiensTable extends Migration
     {
         Schema::create('pasiens', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
+            $table->foreignId('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->unsignedBigInteger('poli_id');
+            $table->foreignId('poli_id');
             $table->foreign('poli_id')->references('id')->on('polis')->onDelete('cascade');
-            $table->string('nik')->unique();
+            $table->char('nik', 16)->unique();
             $table->timestamps();
         });
     }
