@@ -15,6 +15,10 @@ class CreatePasiensTable extends Migration
     {
         Schema::create('pasiens', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->unsignedBigInteger('poli_id');
+            $table->unsignedBigInteger('poli_id')->references('id')->on('polis')->onDelete('cascade');
             $table->timestamps();
         });
     }
