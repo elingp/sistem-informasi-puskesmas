@@ -18,4 +18,9 @@ class Pasien extends Model
     {
         return $this->hasOne(Poli::class);
     }
+
+    public function antrian()
+    {
+        return $this->hasOne(Antrian::class);
+    }
 }

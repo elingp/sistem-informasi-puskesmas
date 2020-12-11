@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Antrian extends Model
 {
     use HasFactory;
+
+    public function pasien()
+    {
+        return $this->hasOne(Pasien::class);
+    }
 }
