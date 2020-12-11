@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             PoliSeeder::class,
             TenagaKesehatanSeeder::class,
+            PasienSeeder::class,
         ]);
     }
 }
