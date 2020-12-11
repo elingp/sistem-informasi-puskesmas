@@ -23,30 +23,32 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/lihatInformasiNakes', function () {
-    return view('layouts.nakes.lihatInformasi');
-});
-Route::get('/tambahInformasiNakes', function () {
-    return view('layouts.nakes.tambahInformasi');
-});
-Route::get('/suntingInformasiNakes', function () {
-    return view('layouts.nakes.suntingInformasi');
-});
-Route::get('/lihatInformasiPasien', function () {
-    return view('layouts.pasien.lihatInformasi');
-});
-Route::get('/tambahInformasiPasien', function () {
-    return view('layouts.pasien.tambahPasien');
-});
-Route::get('/suntingInformasiPasien', function () {
-    return view('layouts.pasien.suntingInformasi');
-});
-Route::get('/lihatInformasiPetugas', function () {
-    return view('layouts.petugas.lihatInformasi');
-});
-Route::get('/tambahInformasiPetugas', function () {
-    return view('layouts.petugas.tambahPetugas');
-});
-Route::get('/suntingInformasiPetugas', function () {
-    return view('layouts.petugas.suntingInformasi');
-});
+Route::get('/tenaga-kesehatan', function () {
+    return view('layouts.nakes.index');
+})->name('nakes.index');
+Route::get('/tenaga-kesehatan/create', function () {
+    return view('layouts.nakes.create');
+})->name('nakes.create');
+Route::get('/tenaga-kesehatan/edit', function () {
+    return view('layouts.nakes.edit');
+})->name('nakes.edit');
+
+Route::get('/pasien', function () {
+    return view('layouts.pasien.index');
+})->name('pasien.index');
+Route::get('/pasien/create', function () {
+    return view('layouts.pasien.create');
+})->name('pasien.create');
+Route::get('/pasien/edit', function () {
+    return view('layouts.pasien.edit');
+})->name('pasien.edit');
+
+Route::get('/petugas', function () {
+    return view('layouts.petugas.index');
+})->name('petugas.index');
+Route::get('/petugas/create', function () {
+    return view('layouts.petugas.create');
+})->name('petugas.create');
+Route::get('/petugas/edit', function () {
+    return view('layouts.petugas.edit');
+})->name('petugas.edit');

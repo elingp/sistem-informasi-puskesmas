@@ -47,7 +47,7 @@ padding: 8px 0px;
                 </a>
               </li>
                <li class="nav-item">
-            <a href="/lihatInformasiNakes" class="nav-link">
+            <a href="{{ route('nakes.index') }}" class="nav-link">
                 <p>
                   Lihat Informasi
                 </p>
@@ -59,7 +59,7 @@ padding: 8px 0px;
           </li>
           @can('create nakes')
           <li class="nav-item">
-            <a href="/tambahInformasiNakes" class="nav-link">
+            <a href="{{ route('nakes.create') }}" class="nav-link">
               <p>
                 Tambah Informasi
               </p>
@@ -72,7 +72,7 @@ padding: 8px 0px;
           @endcan
           @can('edit nakes')
           <li class="nav-item">
-            <a href="/suntingInformasiNakes" class="nav-link">
+            <a href="{{ route('nakes.edit') }}" class="nav-link">
               <p>
                 Sunting Informasi
               </p>
@@ -85,7 +85,7 @@ padding: 8px 0px;
           @endcan
           @can('edit pasien')
           <li class="nav-item">
-          <a href="/lihatInformasiPasien" class="nav-link">
+          <a href="{{ route('pasien.index') }}" class="nav-link">
             <p>
               Lihat Informasi
             </p>
@@ -98,7 +98,7 @@ padding: 8px 0px;
       @endcan
       @can('create pasien')
       <li class="nav-item">
-        <a href="/tambahInformasiPasien" class="nav-link">
+        <a href="{{ route('pasien.create') }}" class="nav-link">
           <p>
             Tambah Data
           </p>
@@ -111,7 +111,7 @@ padding: 8px 0px;
       @endcan
       @can('edit pasien')
       <li class="nav-item">
-        <a href="/suntingInformasiPasien" class="nav-link">
+        <a href="{{ route('pasien.edit') }}" class="nav-link">
           <p>
             Sunting Informasi
           </p>
@@ -124,7 +124,7 @@ padding: 8px 0px;
       @endcan
       @can('edit petugas')
       <li class="nav-item">
-        <a href="/lihatInformasiPetugas" class="nav-link">
+        <a href="{{ route('petugas.index') }}" class="nav-link">
           <p>
             Lihat Informasi
           </p>
@@ -137,7 +137,7 @@ padding: 8px 0px;
       @endcan
       @can('create petugas')
     <li class="nav-item">
-      <a href="/tambahInformasiPetugas" class="nav-link">
+      <a href="{{ route('petugas.create') }}" class="nav-link">
         <p>
           Tambah Data
         </p>
@@ -150,7 +150,7 @@ padding: 8px 0px;
     @endcan
     @can('edit petugas')
     <li class="nav-item">
-      <a href="/suntingInformasiPetugas" class="nav-link">
+      <a href="{{ route('petugas.edit') }}" class="nav-link">
         <p>
           Sunting Informasi
         </p>
