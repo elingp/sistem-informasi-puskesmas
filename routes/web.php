@@ -33,20 +33,20 @@ Route::get('/suntingInformasiNakes', function () {
     return view('layouts.nakes.suntingInformasi');
 });
 Route::get('/lihatInformasiPasien', function () {
-    return view('layouts.Pasien.lihatInformasi');
+    return view('layouts.pasien.lihatInformasi');
 });
 Route::get('/tambahInformasiPasien', function () {
-    return view('layouts.Pasien.tambahPasien');
+    return view('layouts.pasien.tambahPasien');
 });
 Route::get('/suntingInformasiPasien', function () {
-    return view('layouts.Pasien.suntingInformasi');
+    return view('layouts.pasien.suntingInformasi');
 });
 Route::get('/lihatInformasiPetugas', function () {
-    return view('layouts.Petugas.lihatInformasi');
+    return view('layouts.petugas.lihatInformasi');
 });
 Route::get('/tambahInformasiPetugas', function () {
-    return view('layouts.Petugas.tambahPetugas');
+    return view('layouts.petugas.tambahPetugas');
 });
 Route::get('/suntingInformasiPetugas', function () {
-    return view('layouts.Petugas.suntingInformasi');
+    return view('layouts.petugas.suntingInformasi');
 });
