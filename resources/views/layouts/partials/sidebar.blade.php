@@ -1,3 +1,21 @@
+<head>
+  <script>
+      #sinolo{
+width: 35%;
+float: left;
+}
+#sinolo input{
+width: 45%;
+border: none;
+text-align: center;
+}
+#sinolo button{
+width: 25%;
+font-size: 10px;
+padding: 8px 0px;
+}
+      </script>
+</head>
 <aside class="main-sidebar sidebar-dark-primary elevation-4  ">
     <!-- Brand Logo -->
     <a href="/" class="brand-link">
@@ -10,9 +28,6 @@
 
     <div class="sidebar">
       <div class="user-panel mt-3 pb-3 mb-3 d-flex ">
-        <div class="image">
-          <img src="{{asset('adminLTE/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
-        </div>
         <div class="info">
           <a  class="d-block">Adam Lambert</a>
           <a  class="d-block">NIK: 7171092121</a>
@@ -154,7 +169,35 @@
               </a>
           </li>
         </ul>
-  </li>  
+  </li> 
+  <li class="nav-item has-treeview">
+    <a href="#" class="nav-link">
+      <p>
+      Atur Antrian
+      <i class="fas fa-angle-left right"></i>
+      </p>
+    </a>
+      <ul class="nav nav-treeview">
+        <li class="nav-item">
+          <a data-toggle="modal" data-target="#antrianModalUmum" href="#exampleModalUmum" class="nav-link"data-backdrop="false">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Poli Umum</p>
+            </a>
+        </li>
+        <li class="nav-item">
+          <a data-toggle="modal" data-target="#antrianModalKIA" href="#antrianModalKIA" class="nav-link"data-backdrop="false">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Poli KIA</p>
+            </a>
+        </li>
+        <li class="nav-item">
+          <a data-toggle="modal" data-target="#antrianModalGigi" href="#exampleModalGigi" class="nav-link"data-backdrop="false">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Poli Gigi</p>
+            </a>
+        </li>
+      </ul>
+</li> 
     <li class="nav-item">
             <a  data-toggle="modal" data-target="#modalUbahPassword" href="#modalUbahPassword" class="nav-link" data-backdrop="false">
               <i class="nav-icon fas fa-edit"></i>
@@ -194,7 +237,7 @@
               <p>Ambil nomor antrian?</p>
             </div>
             <div class="modal-footer">
-              <button href="/" type="button" class="btn btn-secondary" data-dismiss="modal">Cancle</button>
+              <button href="/" type="button" class="btn btn-secondary" data-dismiss="modal">cancel</button>
               <a  href="/"type="button" class="btn btn-primary">Ok</a>
             </div>
           </div>
@@ -213,7 +256,7 @@
               <p>Ambil nomor antrian?</p>
             </div>
             <div class="modal-footer">
-              <button href="/" type="button" class="btn btn-secondary" data-dismiss="modal">Cancle</button>
+              <button href="/" type="button" class="btn btn-secondary" data-dismiss="modal">cancel</button>
               <a  href="/"type="button" class="btn btn-primary">Ok</a>
             </div>
             </div>
@@ -233,7 +276,7 @@
               <p>Ambil nomor antrian?</p>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancle</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">cancel</button>
               <a  href="/"type="button" class="btn btn-primary">Ok</a>
             </div>
           </div>
@@ -345,12 +388,105 @@
           </div>
         </div>
       </div>
+      <div class="modal fade" id="antrianModalUmum" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" >Poli Umum</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div id="sinolo" style="position:">
+              <div class="d-flex justify-content-center">
+              <input type="text" name="" value="" style="text-align:center">
+            </div>
+            <div class="d-flex justify-content-center">
+            <button id="dec" class="btn btn-danger fa fa-minus pull-left">-</button>
+              <button id="inc" class="btn btn-primary fa fa-plus pull-right">+</button>
+              <button id="res" class="btn btn-info fa fa-plus pull-right">Reset</button>
+            </div>
+          </div>
+            <div class="modal-footer">
+              <button href="/" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <a  href="/"type="button" class="btn btn-primary">Ok</a>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="antrianModalKIA" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" >Poli KIA</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div id="sinolo" style="position:">
+              <div class="d-flex justify-content-center">
+              <input type="text" name="" value="" style="text-align:center">
+            </div>
+            <div class="d-flex justify-content-center">
+            <button id="dec" class="btn btn-danger fa fa-minus pull-left">-</button>
+              <button id="inc" class="btn btn-primary fa fa-plus pull-right">+</button>
+              <button id="res" class="btn btn-info fa fa-plus pull-right">Reset</button>
+            </div>
+          </div>
+            <div class="modal-footer">
+              <button href="/" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <a  href="/"type="button" class="btn btn-primary">Ok</a>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="antrianModalGigi" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" >Poli Gigi</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div id="sinolo" style="position:">
+              <div class="d-flex justify-content-center">
+              <input type="text" name="" value="" style="text-align:center">
+            </div>
+            <div class="d-flex justify-content-center">
+            <button id="dec" class="btn btn-danger fa fa-minus pull-left">-</button>
+              <button id="inc" class="btn btn-primary fa fa-plus pull-right">+</button>
+              <button id="res" class="btn btn-info fa fa-plus pull-right">Reset</button>
+            </div>
+          </div>
+            <div class="modal-footer">
+              <button href="/" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <a  href="/"type="button" class="btn btn-primary">Ok</a>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       <aside class="control-sidebar control-sidebar-dark">
         <!-- Control sidebar content goes here -->
       </aside>
    
     <!-- /.sidebar -->
-
-    
+    <script>
+      var x = 1;
+        $("#sinolo input").attr('value', x);
+            $("#inc").click(function(){
+              $("#sinolo input").attr('value', ++x);
+            });
+            $("#dec").click(function(){
+              $("#sinolo input").attr('value', --x);
+            });
+              $("#res").click(function(){
+              $("#sinolo input").attr('value', 0);
+            });
+          </script>
   </div>
   </aside>
