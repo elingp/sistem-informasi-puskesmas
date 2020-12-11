@@ -13,4 +13,9 @@ class Pasien extends Model
     {
         return $this->hasOne(User::class);
     }
+
+    public function poli()
+    {
+        return $this->hasOne(Poli::class);
+    }
 }
