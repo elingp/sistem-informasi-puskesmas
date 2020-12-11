@@ -23,14 +23,14 @@ padding: 8px 0px;
            alt="AdminLTE Logo"
            class="brand-image img-circle elevation-3"
            style="opacity: .8"> --}}
-      <span class="brand-text font-weight-light">SIP</span>
+      <span class="brand-text font-weight-light">SIP Meo Meo</span>
     </a>
 
     <div class="sidebar">
       <div class="user-panel mt-3 pb-3 mb-3 d-flex ">
         <div class="info">
           @auth
-          <a  class="d-block">{{ Auth::user->name }}</a>
+          <a  class="d-block">{{ Auth::user()->name }}</a>
 
           @endauth
           
@@ -53,10 +53,11 @@ padding: 8px 0px;
                 </p>
                 <br>
                 <p>
-                 Nakes
+                 Tenaga Kesehatan
                 </p>
             </a>
           </li>
+          @can('create nakes')
           <li class="nav-item">
             <a href="/tambahInformasiNakes" class="nav-link">
               <p>
@@ -68,6 +69,8 @@ padding: 8px 0px;
               </p>
             </a>
           </li>
+          @endcan
+          @can('edit nakes')
           <li class="nav-item">
             <a href="/suntingInformasiNakes" class="nav-link">
               <p>
@@ -79,6 +82,8 @@ padding: 8px 0px;
               </p>
             </a>
           </li>
+          @endcan
+          @can('edit pasien')
           <li class="nav-item">
           <a href="/lihatInformasiPasien" class="nav-link">
             <p>
@@ -90,6 +95,8 @@ padding: 8px 0px;
             </p>
         </a>
       </li>
+      @endcan
+      @can('create pasien')
       <li class="nav-item">
         <a href="/tambahInformasiPasien" class="nav-link">
           <p>
@@ -101,6 +108,8 @@ padding: 8px 0px;
           </p>
         </a>
       </li>
+      @endcan
+      @can('edit pasien')
       <li class="nav-item">
         <a href="/suntingInformasiPasien" class="nav-link">
           <p>
@@ -112,6 +121,8 @@ padding: 8px 0px;
           </p>
         </a>
       </li>
+      @endcan
+      @can('edit petugas')
       <li class="nav-item">
         <a href="/lihatInformasiPetugas" class="nav-link">
           <p>
@@ -123,6 +134,8 @@ padding: 8px 0px;
           </p>
         </a>
       </li>
+      @endcan
+      @can('create petugas')
     <li class="nav-item">
       <a href="/tambahInformasiPetugas" class="nav-link">
         <p>
@@ -134,6 +147,8 @@ padding: 8px 0px;
         </p>
       </a>
     </li>
+    @endcan
+    @can('edit petugas')
     <li class="nav-item">
       <a href="/suntingInformasiPetugas" class="nav-link">
         <p>
@@ -145,6 +160,8 @@ padding: 8px 0px;
         </p>
       </a>
     </li>
+    @endcan
+    @can('create antrian')
     <li class="nav-item has-treeview">
       <a href="#" class="nav-link">
         <p>
@@ -172,7 +189,9 @@ padding: 8px 0px;
               </a>
           </li>
         </ul>
-  </li> 
+  </li>
+  @endcan
+  @can('edit antrian') 
   <li class="nav-item has-treeview">
     <a href="#" class="nav-link">
       <p>
@@ -200,31 +219,34 @@ padding: 8px 0px;
             </a>
         </li>
       </ul>
-</li> 
-    <li class="nav-item">
-            <a  data-toggle="modal" data-target="#modalUbahPassword" href="#modalUbahPassword" class="nav-link" data-backdrop="false">
-              <i class="nav-icon fas fa-edit"></i>
-              <p>
-                Ubah Password
-              </p>
-            </a>
-    </li>
+</li>
+@endcan 
+    @guest
     <li class="nav-item">
             <a  data-toggle="modal" data-target="#modalLogin" href="#modalLogin" class="nav-link"  data-backdrop="false">
               <i class="nav-icon fas fa-edit"></i>
               <p>
-                login
+                Login
               </p>
             </a>
     </li>
+    @endguest
+    @auth
     <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-edit"></i>
+            {{-- <a href="#" class="nav-link"> --}}
+              <a class="nav-link" href="{{ route('logout') }}"
+        onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+        <i class="nav-icon fas fa-edit"></i>
               <p>
-                logout
+                Logout
               </p>
-            </a>
+    </a>
     </li>
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+      @csrf
+  </form>
+    @endauth
     </ul>
       </nav>
       <div class="modal fade" id="exampleModalUmum" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -351,7 +373,7 @@ padding: 8px 0px;
               <form method="POST" action="{{ route('login') }}">
                 @csrf
                 <div class="input-group mb-3">
-                  <input type="email" class="form-control" placeholder="Email">
+                  <input name="email" type="email" class="form-control" placeholder="Email">
                   <div class="input-group-append">
                     <div class="input-group-text">
                       <span class="fas fa-envelope"></span>
@@ -359,7 +381,7 @@ padding: 8px 0px;
                   </div>
                 </div>
                 <div class="input-group mb-3">
-                  <input type="password" class="form-control" placeholder="Password">
+                  <input name="password" type="password" class="form-control" placeholder="Password">
                   <div class="input-group-append">
                     <div class="input-group-text">
                       <span class="fas fa-lock"></span>
@@ -369,7 +391,7 @@ padding: 8px 0px;
                 <div class="row">
                   <div class="col-8">
                     <div class="icheck-primary">
-                      <input type="checkbox" id="remember">
+                      <input name="remember" type="checkbox" id="remember">
                       <label for="remember">
                         Remember Me
                       </label>
@@ -380,15 +402,14 @@ padding: 8px 0px;
                     <button type="submit" class="btn btn-primary btn-block">Sign In</button>
                   </div>
                   <!-- /.col -->
+                  @if (Route::has('password.request'))
+                  <p class="m-2">
+                    <a href="{{ route('password.request') }}">I forgot my password</a>
+                  </p>
+                  @endif
                 </div>
               </form>
             </div>
-            <p class="m-2">
-              <a href="/forgotPassword">I forgot my password</a>
-            </p>
-            <p class="m-2">
-              <a href="/register" class="text-center">Register a new membership</a>
-            </p>
           </div>
         </div>
       </div>
