@@ -88,12 +88,6 @@
             <div class="input-group mb-3">
               <input type="password" class="form-control" placeholder="NIK">
             </div>
-            <div class="input-group mb-3">
-              <input type="password" class="form-control" placeholder="Password Sementara">
-            </div>
-            <div class="input-group mb-3">
-              <input type="password" class="form-control" placeholder="Masukkan Kembali Password Sementara">
-            </div>
             <div class="row">
               <!-- /.col -->
               <div class="col-4">

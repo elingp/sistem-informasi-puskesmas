@@ -26,10 +26,10 @@
                 <input type="password" class="form-control" placeholder="NIK">
               </div>
               <div class="input-group mb-3">
-                <input type="password" class="form-control" placeholder="Password Sementara">
+                <input type="password" class="form-control" placeholder="Password">
               </div>
               <div class="input-group mb-3">
-                <input type="password" class="form-control" placeholder="Masukkan Kembali Password Sementara">
+                <input type="password" class="form-control" placeholder="Masukkan Kembali Password">
               </div>
               <div class="row">
                 <!-- /.col -->

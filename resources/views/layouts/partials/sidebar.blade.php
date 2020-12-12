@@ -109,19 +109,6 @@ padding: 8px 0px;
         </a>
       </li>
       @endcan
-      @can('edit pasien')
-      <li class="nav-item">
-        <a href="{{ route('pasien.edit') }}" class="nav-link">
-          <p>
-            Sunting Informasi
-          </p>
-          <br>
-          <p>
-           Pasien
-          </p>
-        </a>
-      </li>
-      @endcan
       @can('edit petugas')
       <li class="nav-item">
         <a href="{{ route('petugas.index') }}" class="nav-link">
@@ -140,19 +127,6 @@ padding: 8px 0px;
       <a href="{{ route('petugas.create') }}" class="nav-link">
         <p>
           Tambah Data
-        </p>
-        <br>
-        <p>
-         Petugas
-        </p>
-      </a>
-    </li>
-    @endcan
-    @can('edit petugas')
-    <li class="nav-item">
-      <a href="{{ route('petugas.edit') }}" class="nav-link">
-        <p>
-          Sunting Informasi
         </p>
         <br>
         <p>
@@ -349,7 +323,7 @@ padding: 8px 0px;
                   </div>
                   <!-- /.col -->
                   <div class="col-4">
-                    <button type="submit" class="btn btn-primary btn-block">Daftar</button>
+                    <button type="submit" class="btn btn-primary btn-block">Ok</button>
                   </div>
                   <!-- /.col -->
                 </div>
@@ -389,24 +363,24 @@ padding: 8px 0px;
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-8">
+                  {{-- <div class="col-8">
                     <div class="icheck-primary">
                       <input name="remember" type="checkbox" id="remember">
                       <label for="remember">
                         Remember Me
                       </label>
                     </div>
-                  </div>
+                  </div> --}}
                   <!-- /.col -->
                   <div class="col-4">
                     <button type="submit" class="btn btn-primary btn-block">Sign In</button>
                   </div>
                   <!-- /.col -->
-                  @if (Route::has('password.request'))
+                  {{-- @if (Route::has('password.request'))
                   <p class="m-2">
                     <a href="{{ route('password.request') }}">I forgot my password</a>
                   </p>
-                  @endif
+                  @endif --}}
                 </div>
               </form>
             </div>

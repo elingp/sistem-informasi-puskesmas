@@ -24,16 +24,13 @@
                   <thead>
                   <tr>
                     <th>Nama</th>
-                    <th>Email</th>
-                    <th style="text-align:center">NIK</th>
+                    <th style="text-align:center">Jadwal</th>
                     <th>Nomor Telpon</th>
                   </tr>
                   </thead>
                   <tbody>
                   <tr>
                     <td>Supardi</td>
-                    <td>Umum
-                    </td>
                     <td>Senin 4-5pm, 
                       Selasa 6-8pm
                     </td>
@@ -47,8 +44,6 @@
                   </tr>
                   <tr>
                     <td>Akila</td>
-                    <td>KIA
-                    </td>
                     <td>Rabu 12-3pm, 
                       Jumat 6-8pm
                     </td>
@@ -61,8 +56,6 @@
                     </td>
                   </tr><tr>
                     <td>Alfreds</td>
-                    <td>Gigi
-                    </td>
                     <td>Kamis 3-5pm, 
                       Sabtu 12-3pm
                     </td>
@@ -101,13 +94,10 @@
         <div class="modal-body">
           <form action="../../index.html" method="post">
             <div class="input-group mb-3">
-              <input type="text" class="form-control" placeholder="Nama Tenaga Kesehatan">
+              <input type="text" class="form-control" placeholder="Nama Petugas">
             </div>
             <div class="input-group mb-3">
-              <input type="email" class="form-control" placeholder="Nama Poli">
-            </div>
-            <div class="input-group mb-3">
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Jadwal Tenaga Kesehatan (cth: Senin 14.00-18.00 WIB)" ></textarea>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Jadwal Petugas (cth: Senin 14.00-18.00 WIB)" ></textarea>
             </div>
             <div class="input-group mb-3">
               <input type="password" class="form-control" placeholder="Nomor Telpon">
