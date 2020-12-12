@@ -60,6 +60,7 @@
         </div>
         <!-- /.row -->
         <!-- Main row -->
+        @role('pasien')
         <div class="row">
           <h4 class="m-2">Nomor Antrian Anda</h4>
           
@@ -75,6 +76,7 @@
             <a href="#" class="small-box-footer bg-danger">Batal</a>
           </div>
         </div>
+        @endrole
         <!-- /.row (main row) -->
       </div><!-- /.container-fluid -->
     </section>
